@@ -6,10 +6,11 @@
   <div class="cards-container">
     <div class="toggle-plan">
       <h3>Choose a plan</h3>
+
       <div class="toggle-switch-container">
         <p>Billed monthly</p>
         <label class="switch">
-          <input type="checkbox" checked="{isToggled}" onChange="{onToggle}" />
+          <input type="checkbox" />
           <span class="slider"></span>
         </label>
         <p>Billed anually</p>
@@ -21,19 +22,56 @@
           <h3>Starter</h3>
           <p>$55</p>
         </div>
+
+        <ul class="list-features">
+          <li>500 MAUS</li>
+          <li>3 projects</li>
+          <li>Unlimited guides</li>
+          <li>Unlimited flows</li>
+          <li>Unlimited branded themes</li>
+          <li>Email support</li>
+        </ul>
+        <div class="card-footer">
+          <button>Choose Plan</button>
+        </div>
       </div>
       <div class="price-card">
         <div class="price-card-header">
           <h3>Pro</h3>
-          <p>
-            $99<sub class="subscript-tags">/month</sub>
-          </p>
+          <p>$99<sub class="subscript-tags">/month</sub></p>
+          <select name="monthly-packages" class="select-package">
+            <option value="2500MAUs" selected>2500MAUS</option>
+            <option value="2500MAUs">5000MAUS</option>
+            <option value="2500MAUs">10000MAUS</option>
+          </select>
+        </div>
+        <p id="select-tag">Monthly active users</p>
+        <ul class="list-features">
+          <li>All starter features,plus:</li>
+          <li>Unlimited Projects</li>
+          <li>Unlimited fully customizable themes</li>
+          <li>A dedicated Customer Success Manager</li>
+        </ul>
+        <div class="card-footer">
+          <button>Choose Plan</button>
         </div>
       </div>
       <div class="price-card">
         <div class="price-card-header">
           <h3>Enterprise</h3>
           <p>Let's Talk!</p>
+        </div>
+        <div class="price-details">
+          <ul class="list-features">
+            <li>All pro features</li>
+            <li>Unlimited MAUs</li>
+            <li>Dedicated Environment</li>
+            <li>Dedicated Enterprise account administration</li>
+            <li>Premium support and services</li>
+          </ul>
+          <div class="card-footer">
+            <button>Contact us</button>
+          </div>
         </div>
       </div>
     </div>
