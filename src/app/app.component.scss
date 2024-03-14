@@ -1,13 +1,16 @@
 .planner-page {
-  height: 100vh;
+  min-height: 100vh;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .current-plan {
     background-color: #bc1e4a;
     width: 18rem;
     color: white;
     text-align: center;
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 0px auto 55px;
+    padding: 0.2rem;
     border-radius: 0 0 10px 10px;
     p {
       font-weight: lighter;
@@ -20,13 +23,10 @@
   }
   .cards-container {
     color: white;
-    padding: 15px;
-    position: absolute;
-    top: 19%;
-    left: 3%;
-    width: 95vw;
+    padding: 1px;
+    width: 100%;
     h3 {
-      font-size: 20px;
+      font-size: 18px;
       text-align: center;
     }
 
@@ -35,7 +35,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 10px;
         p {
           font-size: smaller;
           margin: 5px;
@@ -88,15 +88,14 @@
   .price-cards {
     display: flex;
     justify-content: space-around;
-    width: 85%;
+    width: 83%;
     margin: 10px auto 0 auto;
     flex-wrap: wrap;
     .price-card {
       background-color: #22262c;
-      padding: 15px 0;
-      height: 400px;
+      padding: 10px 0;
       width: 320px;
-      margin: 10px;
+      margin: 2px auto 2px auto;
       border-radius: 8px;
       display: flex;
       flex-direction: column;
