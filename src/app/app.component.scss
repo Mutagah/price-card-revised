@@ -88,13 +88,13 @@
   .price-cards {
     display: flex;
     justify-content: space-around;
-    width: 90%;
+    width: 89%;
     margin: 10px auto 0 auto;
     flex-wrap: wrap;
     .price-card {
       background-color: #22262c;
       padding: 10px 0;
-      width: 320px;
+      width: 300px;
       margin: 2px auto 2px auto;
       border-radius: 8px;
       display: flex;
@@ -134,9 +134,6 @@
         color: #6c213a;
         padding-left: 50px;
       }
-    }
-    .price-card:hover {
-      border: 2px solid #bc1e41;
     }
   }
 
