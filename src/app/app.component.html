@@ -9,7 +9,11 @@
       <div class="toggle-switch-container">
         <p>Billed monthly</p>
         <label class="switch">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            (ngModelChange)="toggleBoxChange($event)"
+            [(ngModel)]="isToggled"
+          />
           <span class="slider"></span>
         </label>
         <p>Billed anually</p>
@@ -20,8 +24,13 @@
         <div *ngFor="let card of priceCards" class="price-card">
           <div class="price-card-header">
             <h3>{{ card.name }}</h3>
-            <p>
-              {{card.price}}<sub class="subscript-tags">{{ card?.rotation }}</sub>
+            <p *ngIf="!isToggled">
+              {{ card.prices.monthly
+              }}<sub class="subscript-tags">{{ card?.rotations?.monthly }}</sub>
+            </p>
+            <p *ngIf="isToggled">
+              {{ card.prices.yearly
+              }}<sub class="subscript-tags">{{ card?.rotations?.yearly }}</sub>
             </p>
             <ng-container *ngIf="card.name === 'Pro'">
               <select name="monthly-packages" class="select-package">
@@ -41,7 +50,7 @@
             <button>Choose Plan</button>
           </div>
         </div>
-      </div>    
+      </div>
     </div>
   </div>
 </div>

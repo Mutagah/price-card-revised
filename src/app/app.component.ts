@@ -7,11 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'price_cards';
+  isToggled: boolean = false;
 
   priceCards = [
     {
       name: 'Starter',
-      price: '$55',
+      prices: {
+        monthly: '$55',
+        yearly: '$550',
+      },
       features: [
         '500 MAUS',
         '3 projects',
@@ -23,8 +27,14 @@ export class AppComponent {
     },
     {
       name: 'Pro',
-      price: '$99',
-      rotation:'/month',
+      prices: {
+        monthly: '$99',
+        yearly: '$990',
+      },
+      rotations: {
+        monthly: '/month',
+        yearly: '/year',
+      },
       features: [
         'All starter features, plus:',
         'Unlimited Projects',
@@ -34,7 +44,10 @@ export class AppComponent {
     },
     {
       name: 'Enterprise',
-      price: "Let's Talk!",
+      prices: {
+        monthly: "Let's Talk!",
+        yearly: "Let's Talk!",
+      },
       features: [
         'All pro features',
         'Unlimited MAUs',
@@ -44,4 +57,8 @@ export class AppComponent {
       ],
     },
   ];
+
+  toggleBoxChange(event: any) {
+    this.isToggled = event;
+  }
 }
