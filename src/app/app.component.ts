@@ -24,6 +24,7 @@ export class AppComponent {
         'Unlimited branded themes',
         'Email support',
       ],
+      buttonData:"Choose Plan"
     },
     {
       name: 'Pro',
@@ -41,6 +42,7 @@ export class AppComponent {
         'Unlimited fully customizable themes',
         'A dedicated Customer Success Manager',
       ],
+      buttonData:"Choose Plan"
     },
     {
       name: 'Enterprise',
@@ -55,7 +57,8 @@ export class AppComponent {
         'Dedicated Enterprise account administration',
         'Premium support and services',
       ],
-    },
+      buttonData:"Contact us"
+    }
   ];
 
   toggleBoxChange(event: any) {
